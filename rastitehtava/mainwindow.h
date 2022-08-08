@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtNetwork>
+#include <QNetworkAccessManager>
+#include <QJsonDocument>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,8 +18,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void myAsyncFunction();
+    QString valueFromAsync;
+
+private slots:
+    void on_btnShow_clicked();
+    void getCarSlot (QNetworkReply *reply);
+
 
 private:
     Ui::MainWindow *ui;
+    QNetworkAccessManager *manager;
+    QNetworkReply *reply;
+
 };
 #endif // MAINWINDOW_H

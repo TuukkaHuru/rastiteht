@@ -222,6 +222,7 @@ Makefile: ../rastitehtava.pro D:/qt/5.15.2/mingw81_32/mkspecs/win32-g++/qmake.co
 		D:/qt/5.15.2/mingw81_32/mkspecs/features/qt_config.prf \
 		D:/qt/5.15.2/mingw81_32/mkspecs/win32-g++/qmake.conf \
 		D:/qt/5.15.2/mingw81_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/qt/5.15.2/mingw81_32/mkspecs/features/exclusive_builds.prf \
 		D:/qt/5.15.2/mingw81_32/mkspecs/features/toolchain.prf \
 		D:/qt/5.15.2/mingw81_32/mkspecs/features/default_pre.prf \
@@ -248,9 +249,9 @@ Makefile: ../rastitehtava.pro D:/qt/5.15.2/mingw81_32/mkspecs/win32-g++/qmake.co
 		../rastitehtava.pro \
 		D:/qt/5.15.2/mingw81_32/lib/Qt5Widgets.prl \
 		D:/qt/5.15.2/mingw81_32/lib/Qt5Gui.prl \
+		D:/qt/5.15.2/mingw81_32/lib/Qt5Network.prl \
 		D:/qt/5.15.2/mingw81_32/lib/Qt5Core.prl \
 		D:/qt/5.15.2/mingw81_32/lib/qtmain.prl \
-		.qmake.stash \
 		D:/qt/5.15.2/mingw81_32/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\rastitehtava.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 D:/qt/5.15.2/mingw81_32/mkspecs/features/spec_pre.prf:
@@ -405,6 +406,7 @@ D:/qt/5.15.2/mingw81_32/mkspecs/features/qt_functions.prf:
 D:/qt/5.15.2/mingw81_32/mkspecs/features/qt_config.prf:
 D:/qt/5.15.2/mingw81_32/mkspecs/win32-g++/qmake.conf:
 D:/qt/5.15.2/mingw81_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/qt/5.15.2/mingw81_32/mkspecs/features/exclusive_builds.prf:
 D:/qt/5.15.2/mingw81_32/mkspecs/features/toolchain.prf:
 D:/qt/5.15.2/mingw81_32/mkspecs/features/default_pre.prf:
@@ -431,9 +433,9 @@ D:/qt/5.15.2/mingw81_32/mkspecs/features/lex.prf:
 ../rastitehtava.pro:
 D:/qt/5.15.2/mingw81_32/lib/Qt5Widgets.prl:
 D:/qt/5.15.2/mingw81_32/lib/Qt5Gui.prl:
+D:/qt/5.15.2/mingw81_32/lib/Qt5Network.prl:
 D:/qt/5.15.2/mingw81_32/lib/Qt5Core.prl:
 D:/qt/5.15.2/mingw81_32/lib/qtmain.prl:
-.qmake.stash:
 D:/qt/5.15.2/mingw81_32/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\rastitehtava.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
