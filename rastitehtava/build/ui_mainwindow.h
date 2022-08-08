@@ -11,8 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -22,6 +24,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QPushButton *btnShow;
+    QLabel *labelInfo;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -32,9 +36,16 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        btnShow = new QPushButton(centralwidget);
+        btnShow->setObjectName(QString::fromUtf8("btnShow"));
+        btnShow->setGeometry(QRect(160, 100, 161, 81));
+        labelInfo = new QLabel(centralwidget);
+        labelInfo->setObjectName(QString::fromUtf8("labelInfo"));
+        labelInfo->setGeometry(QRect(160, 190, 161, 121));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -48,6 +59,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        btnShow->setText(QCoreApplication::translate("MainWindow", "N\303\244yt\303\244", nullptr));
+        labelInfo->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

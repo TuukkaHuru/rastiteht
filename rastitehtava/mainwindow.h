@@ -14,8 +14,17 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void myAsyncFunction();
+    QString valueFromAsync;
+
+private slots:
+    void on_btnShow_clicked();
+    void mySlot();
 
 private:
     Ui::MainWindow *ui;
+signals:
+    void mySignal();
+
 };
 #endif // MAINWINDOW_H
