@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtNetwork>
+#include <QNetworkAccessManager>
+#include <QJsonDocument>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,12 +23,13 @@ public:
 
 private slots:
     void on_btnShow_clicked();
-    void mySlot();
+    void getCarSlot (QNetworkReply *reply);
+
 
 private:
     Ui::MainWindow *ui;
-signals:
-    void mySignal();
+    QNetworkAccessManager *manager;
+    QNetworkReply *reply;
 
 };
 #endif // MAINWINDOW_H

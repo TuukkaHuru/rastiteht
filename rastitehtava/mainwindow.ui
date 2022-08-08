@@ -24,10 +24,10 @@
      </rect>
     </property>
     <property name="text">
-     <string>Näytä</string>
+     <string>Näytä car</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelInfo">
+   <widget class="QLabel" name="TxtCar">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string/>
     </property>
    </widget>
   </widget>
