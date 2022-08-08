@@ -32,7 +32,7 @@ void MainWindow::on_btnShow_clicked()
     //BASIC AUTENTIKOINTI LOPPU
 
     manager = new QNetworkAccessManager(this);
-    connect(manager, SIGNAL(finished (QNetworkReply*)),this, SLOT(getBookSlot(QNetworkReply*)));
+    connect(manager, SIGNAL(finished (QNetworkReply*)),this, SLOT(getCarSlot(QNetworkReply*)));
     reply = manager->get(request);
 }
 
